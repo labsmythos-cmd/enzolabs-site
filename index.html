@@ -156,6 +156,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
 .folk{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px 64px}
 .person{display:flex;gap:20px}
 .person .pic{width:84px;height:84px;border-radius:16px;background:var(--petrol);flex:none;display:grid;place-items:center;color:var(--foam);font-size:30px}
+img.pic{object-fit:cover;display:block}
 .person h3{font-size:17px}
 .person .role{font-family:var(--display);font-weight:500;font-size:14.5px;color:var(--teal);margin:4px 0 12px}
 .person p{font-size:14.5px;line-height:1.7;color:#546667;max-width:40ch}
@@ -345,8 +346,7 @@ footer a:hover{color:var(--cream)}
     <p class="lede">We met building systems at Spectrum. Now we do it for shops that can't justify a full-time receptionist.</p>
     <div class="folk">
       <div class="person">
-        <!-- TODO: swap for a real photo -->
-        <div class="pic"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></div>
+        <img class="pic" src="maksym.jpg" alt="Maksym Lysun" width="84" height="84" loading="lazy">
         <div>
           <h3>Maksym Lysun</h3>
           <p class="role">Runs the business side</p>
@@ -354,7 +354,7 @@ footer a:hover{color:var(--cream)}
         </div>
       </div>
       <div class="person">
-        <div class="pic"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></div>
+        <img class="pic" src="chris.jpg" alt="Chris Rodrigues" width="84" height="84" loading="lazy">
         <div>
           <h3>Chris Rodrigues</h3>
           <p class="role">Builds the agents</p>
