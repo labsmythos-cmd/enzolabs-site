@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — EnzoLabs</title>
+<meta name="description" content="How Enzo Labs collects, uses, and protects information from calls, messages, and appointments.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --abyss:#0a2f36; --petrol:#0d4a53; --teal:#0d5c63; --foam:#7fcdd3; --foam-lt:#9fe0e5;
+  --mist:#9fc4c8; --cream:#f2ece0; --paper:#ffffff; --paper-2:#eaf1f2;
+  --ink:#14201f; --ink-2:#5a6b6c; --line:#d5e0e0;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper-2);-webkit-font-smoothing:antialiased;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin:0}
+h1,h2{font-weight:700;letter-spacing:-0.028em;line-height:1.08}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--foam);outline-offset:3px;border-radius:4px}
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-0.14em;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.nav{background:var(--abyss);position:sticky;top:0;z-index:50}
+.nav-in{display:flex;align-items:center;gap:12px;height:64px}
+.mark{width:30px;height:30px;border-radius:7px;background:var(--cream);display:grid;place-items:center;color:var(--abyss);font-size:19px;flex:none}
+.brand{font-family:var(--display);font-size:18px;font-weight:600;color:var(--cream);letter-spacing:-0.01em}
+.brand a{text-decoration:none}
+.nav-sp{flex:1}
+.nav a.lnk{color:var(--mist);text-decoration:none;font-size:14px;margin-left:26px}
+.nav a.lnk:hover{color:var(--paper)}
+.btn{display:inline-block;font-size:14px;font-weight:500;padding:9px 16px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;transition:transform .12s ease,background .15s ease}
+.btn-cream{background:var(--cream);color:var(--abyss);margin-left:26px}
+.btn-cream:hover{background:#fff}
+
+.page-head{background:var(--petrol);color:#fff;padding:60px 0 56px}
+.page-head h1{font-size:clamp(30px,4.6vw,46px);color:#fff;margin-bottom:14px}
+.page-head .stamp{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--foam)}
+
+.legal-wrap{padding:56px 0 88px}
+.panel{background:#fff;border-radius:22px;padding:44px 48px;box-shadow:0 1px 2px rgba(13,74,83,.04),0 18px 44px rgba(13,74,83,.07);max-width:860px}
+.legal h2{font-size:22px;margin:38px 0 12px;color:var(--ink)}
+.legal h2:first-of-type{margin-top:0}
+.legal h3{font-size:17px;font-weight:600;margin:22px 0 8px;color:var(--teal)}
+.legal p{font-size:15.5px;line-height:1.75;color:#495c5d;margin-bottom:14px}
+.legal ul{margin:0 0 16px;padding-left:22px}
+.legal li{font-size:15.5px;line-height:1.75;color:#495c5d;margin-bottom:7px}
+.legal a{color:var(--teal);text-underline-offset:3px}
+.legal strong{color:var(--ink);font-weight:600}
+.legal .callout{background:var(--paper-2);border-left:3px solid var(--teal);border-radius:10px;padding:18px 22px;margin:20px 0}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .intro{font-family:var(--display);font-weight:400;font-size:18px;line-height:1.55;letter-spacing:-.015em;color:#4a5c5d;margin-bottom:30px}
+.toc{margin-bottom:34px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px}
+.toc li{font-size:14.5px;margin-bottom:6px;color:#495c5d}
+.toc a{color:var(--teal);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+
+footer{background:var(--abyss);border-top:1px solid #17454d;padding:26px 0;color:#7fa5aa;font-size:13px}
+.foot-in{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+footer a{color:#7fa5aa;text-decoration:none}
+footer a:hover{color:var(--cream)}
+.foot-legal{display:flex;gap:10px;align-items:center}
+
+@media(max-width:760px){
+  .nav a.lnk{display:none}
+  .panel{padding:26px 22px;border-radius:18px}
+  .legal-wrap{padding:36px 0 56px}
+  .page-head{padding:44px 0 40px}
+  .toc ol{columns:1}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="2"/></symbol>
+</svg>
+<nav class="nav">
+  <div class="wrap nav-in">
+    <div class="mark"><svg class="ic"><use href="#i-rings"/></svg></div>
+    <span class="brand"><a href="/">EnzoLabs</a></span>
+    <span class="nav-sp"></span>
+    <a class="lnk" href="/#how">How it works</a>
+    <a class="lnk" href="/#faq">FAQ</a>
+    <a class="btn btn-cream" href="/#book">Book a demo</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="stamp">Last Updated: August 26, 2026</p>
+  </div>
+</header>
+
+<main class="legal-wrap">
+  <div class="wrap">
+    <div class="panel legal">
+      <p class="intro">Enzo Labs provides AI-powered business automation, including AI phone receptionists, appointment scheduling, customer service, voice communications, and SMS messaging on behalf of client businesses. This policy explains what information we collect, how we use it, and the choices available to you.</p>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#p1">Who we are</a></li>
+          <li><a href="#p2">Information we collect</a></li>
+          <li><a href="#p3">How we use information</a></li>
+          <li><a href="#p4">SMS messaging</a></li>
+          <li><a href="#p5">Voice calls and recordings</a></li>
+          <li><a href="#p6">Service providers</a></li>
+          <li><a href="#p7">Data security</a></li>
+          <li><a href="#p8">Data retention</a></li>
+          <li><a href="#p9">Your privacy choices</a></li>
+          <li><a href="#p10">Children's privacy</a></li>
+          <li><a href="#p11">Changes to this policy</a></li>
+          <li><a href="#p12">Contact us</a></li>
+        </ol>
+      </div>
+
+      <h2 id="p1">1. Who we are</h2>
+      <p>Enzo Labs ("Enzo Labs," "we," "us," or "our") builds and operates AI-powered communication systems for small and medium-sized businesses. Our services include AI phone receptionists that answer inbound calls, appointment booking and rescheduling, automated customer-service responses, and transactional SMS messaging.</p>
+      <p>We act in two capacities. When you interact with Enzo Labs directly — for example, by contacting us about our services — we determine how your information is handled. When you interact with an AI receptionist or messaging system that Enzo Labs operates <strong>on behalf of a client business</strong>, we process that information as a service provider to that business, under their instructions. The client business's own privacy practices also apply to that interaction.</p>
+
+      <h2 id="p2">2. Information we collect</h2>
+      <h3>Contact and identity information</h3>
+      <ul>
+        <li>Names</li>
+        <li>Phone numbers, including mobile numbers</li>
+        <li>Email addresses</li>
+      </ul>
+
+      <h3>Appointment and scheduling information</h3>
+      <ul>
+        <li>Requested, booked, rescheduled, or cancelled appointment times</li>
+        <li>Service or appointment type requested</li>
+        <li>Staff member or provider requested, where applicable</li>
+        <li>Notes or preferences you provide relating to an appointment</li>
+      </ul>
+
+      <h3>Voice-call and messaging information</h3>
+      <ul>
+        <li>The content of calls handled by an AI receptionist, including transcripts</li>
+        <li>Call metadata such as the phone number dialed, the calling number, date, time, and call duration</li>
+        <li>The content of SMS messages sent to or from a number we operate, and related delivery metadata</li>
+        <li>Audio recordings, where recording is enabled for a given client business and permitted by applicable law</li>
+      </ul>
+
+      <h3>Information you voluntarily provide</h3>
+      <p>You may choose to give additional information during a call, a message exchange, or through a form or email — for example the reason for your visit, a callback preference, or details relevant to your request. We collect what you choose to share.</p>
+
+      <h3>Technical information</h3>
+      <p>When you visit our website we may collect limited technical information such as browser type, device type, and pages viewed, for the purpose of operating and improving the site.</p>
+
+      <h2 id="p3">3. How we use information</h2>
+      <p>We use the information described above to:</p>
+      <ul>
+        <li><strong>Operate AI receptionist and customer-service functionality</strong> — answering calls, understanding requests, retrieving business information such as hours, services, and pricing, and responding on behalf of the client business</li>
+        <li><strong>Book, confirm, reschedule, and cancel appointments</strong>, and communicate those changes to you and to the client business</li>
+        <li><strong>Send transactional and customer-care SMS messages</strong> as described in Section 4</li>
+        <li><strong>Deliver messages and summaries to the client business</strong>, including call transcripts, missed-call notifications, and booking details</li>
+        <li><strong>Provide, maintain, secure, and improve our services</strong>, including troubleshooting, quality review, and improving accuracy of our AI systems</li>
+        <li><strong>Comply with legal obligations</strong> and enforce our Terms &amp; Conditions</li>
+      </ul>
+      <p>We do not sell personal information. We do not use the content of your calls or messages to send you marketing from Enzo Labs.</p>
+
+      <h2 id="p4">4. SMS messaging</h2>
+      <p>Enzo Labs operates SMS messaging on behalf of client businesses. If you provide your mobile number to a business we serve, or opt in to receive messages, you may receive transactional and customer-care SMS messages such as:</p>
+      <ul>
+        <li>Appointment confirmations</li>
+        <li>Appointment reminders</li>
+        <li>Scheduling and rescheduling information</li>
+        <li>Cancellation confirmations</li>
+        <li>Business information you requested, such as hours, location, services, or pricing</li>
+        <li>Customer-service responses to questions you have asked</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Message frequency varies.</strong> The number of messages you receive depends on your interactions with the business — for example, how many appointments you book or questions you ask.</p>
+        <p><strong>Message and data rates may apply.</strong> Charges are determined by your mobile carrier and plan.</p>
+        <p><strong>Consent to receive SMS messages is not a condition of purchasing any goods or services.</strong></p>
+        <p>Reply <strong>STOP</strong> at any time to opt out of further messages. Reply <strong>HELP</strong> for assistance.</p>
+      </div>
+
+      <h3>No sale or sharing of mobile information</h3>
+      <p><strong>Mobile information, phone numbers, and SMS opt-in consent will not be sold, rented, or shared with third parties or affiliates for their own marketing or promotional purposes.</strong> This applies to all categories of mobile data.</p>
+      <p>Information may be processed by service providers strictly when necessary to operate Enzo Labs' communications infrastructure — for example, a telecommunications provider that transmits a message to your carrier. These providers may use the information only to deliver the service to us and are prohibited from using it for their own marketing purposes.</p>
+
+      <h2 id="p5">5. Voice calls and recordings</h2>
+      <p>Calls answered by an AI receptionist are handled by automated systems. Depending on the configuration chosen by the client business, calls may be transcribed and may be recorded. Where recording or transcription occurs, we and our client businesses seek to provide notice and obtain consent as required by applicable law, which varies by jurisdiction.</p>
+      <p>If you prefer not to interact with an automated system, you may ask to be transferred, request a callback, or contact the business directly by other means.</p>
+
+      <h2 id="p6">6. Service providers</h2>
+      <p>We rely on third-party providers to deliver our services. These may include telecommunications and messaging carriers, cloud hosting and infrastructure providers, speech and language processing providers, scheduling and calendar systems, and analytics tools.</p>
+      <p>These providers receive only the information necessary to perform their function, are bound by contractual obligations to protect it, and may not use it for their own purposes.</p>
+      <p>We may also disclose information where required by law, to respond to lawful requests from public authorities, to protect our rights or the safety of others, or in connection with a merger, acquisition, or sale of assets.</p>
+
+      <h2 id="p7">7. Data security</h2>
+      <p>We maintain administrative, technical, and physical safeguards designed to protect information against unauthorized access, disclosure, alteration, and destruction. These include encryption of data in transit, access controls limiting who can view customer data, and regular review of our systems and providers.</p>
+      <p>No method of transmission or storage is completely secure. While we work to protect your information, we cannot guarantee absolute security.</p>
+
+      <h2 id="p8">8. Data retention</h2>
+      <p>We retain information for as long as necessary to provide our services, meet the operational needs of the client business we serve, resolve disputes, and comply with legal obligations.</p>
+      <p>Retention periods for call transcripts, recordings, and message history vary by client business and configuration. When information is no longer needed, we delete it or de-identify it. A client business may request deletion of records associated with its account, subject to our legal obligations.</p>
+
+      <h2 id="p9">9. Your privacy choices</h2>
+      <ul>
+        <li><strong>Opt out of SMS</strong> — reply STOP to any message. You may receive a single confirmation that you have been unsubscribed.</li>
+        <li><strong>Request assistance</strong> — reply HELP to any message, or contact us using the details in Section 12.</li>
+        <li><strong>Access, correction, or deletion</strong> — you may request access to, correction of, or deletion of personal information we hold about you. Where we process information on behalf of a client business, we will refer your request to that business and support them in responding.</li>
+        <li><strong>Decline automated interaction</strong> — you may ask to speak with a person or contact the business through another channel.</li>
+      </ul>
+      <p>Depending on where you live, you may have additional rights under laws such as the California Consumer Privacy Act or other state or national privacy laws. To exercise any right, contact us using the details below.</p>
+
+      <h2 id="p10">10. Children's privacy</h2>
+      <p>Our services are directed to businesses and their adult customers. We do not knowingly collect personal information from children under 13. If you believe a child has provided us information, contact us and we will delete it.</p>
+
+      <h2 id="p11">11. Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page. Material changes will be communicated through our website or, where appropriate, directly. Continued use of our services after an update constitutes acceptance of the revised policy.</p>
+
+      <h2 id="p12">12. Contact us</h2>
+      <p>Questions about this Privacy Policy or about how your information is handled:</p>
+      <ul>
+        <li>Email: <a href="mailto:labsmythos@gmail.com">labsmythos@gmail.com</a></li>
+        <li>Phone: <a href="tel:+13252080538">(325) 208-0538</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>&copy; 2026 EnzoLabs</span>
+    <span class="nav-sp"></span>
+    <span class="foot-legal"><a href="/privacy.html">Privacy Policy</a> <span>|</span> <a href="/terms.html">Terms &amp; Conditions</a></span>
+    <a href="tel:+13252080538">(325) 208-0538</a>
+    <a href="mailto:labsmythos@gmail.com">labsmythos@gmail.com</a>
+    <a href="https://linkedin.com/company/enzolabs-ai">LinkedIn</a>
+  </div>
+</footer>
+</body>
+</html>

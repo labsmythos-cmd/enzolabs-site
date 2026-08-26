@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms &amp; Conditions — EnzoLabs</title>
+<meta name="description" content="Terms governing use of Enzo Labs AI receptionist, appointment, and SMS messaging services.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --abyss:#0a2f36; --petrol:#0d4a53; --teal:#0d5c63; --foam:#7fcdd3; --foam-lt:#9fe0e5;
+  --mist:#9fc4c8; --cream:#f2ece0; --paper:#ffffff; --paper-2:#eaf1f2;
+  --ink:#14201f; --ink-2:#5a6b6c; --line:#d5e0e0;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper-2);-webkit-font-smoothing:antialiased;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin:0}
+h1,h2{font-weight:700;letter-spacing:-0.028em;line-height:1.08}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--foam);outline-offset:3px;border-radius:4px}
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-0.14em;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.nav{background:var(--abyss);position:sticky;top:0;z-index:50}
+.nav-in{display:flex;align-items:center;gap:12px;height:64px}
+.mark{width:30px;height:30px;border-radius:7px;background:var(--cream);display:grid;place-items:center;color:var(--abyss);font-size:19px;flex:none}
+.brand{font-family:var(--display);font-size:18px;font-weight:600;color:var(--cream);letter-spacing:-0.01em}
+.brand a{text-decoration:none}
+.nav-sp{flex:1}
+.nav a.lnk{color:var(--mist);text-decoration:none;font-size:14px;margin-left:26px}
+.nav a.lnk:hover{color:var(--paper)}
+.btn{display:inline-block;font-size:14px;font-weight:500;padding:9px 16px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;transition:transform .12s ease,background .15s ease}
+.btn-cream{background:var(--cream);color:var(--abyss);margin-left:26px}
+.btn-cream:hover{background:#fff}
+
+.page-head{background:var(--petrol);color:#fff;padding:60px 0 56px}
+.page-head h1{font-size:clamp(30px,4.6vw,46px);color:#fff;margin-bottom:14px}
+.page-head .stamp{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--foam)}
+
+.legal-wrap{padding:56px 0 88px}
+.panel{background:#fff;border-radius:22px;padding:44px 48px;box-shadow:0 1px 2px rgba(13,74,83,.04),0 18px 44px rgba(13,74,83,.07);max-width:860px}
+.legal h2{font-size:22px;margin:38px 0 12px;color:var(--ink)}
+.legal h2:first-of-type{margin-top:0}
+.legal h3{font-size:17px;font-weight:600;margin:22px 0 8px;color:var(--teal)}
+.legal p{font-size:15.5px;line-height:1.75;color:#495c5d;margin-bottom:14px}
+.legal ul{margin:0 0 16px;padding-left:22px}
+.legal li{font-size:15.5px;line-height:1.75;color:#495c5d;margin-bottom:7px}
+.legal a{color:var(--teal);text-underline-offset:3px}
+.legal strong{color:var(--ink);font-weight:600}
+.legal .callout{background:var(--paper-2);border-left:3px solid var(--teal);border-radius:10px;padding:18px 22px;margin:20px 0}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .intro{font-family:var(--display);font-weight:400;font-size:18px;line-height:1.55;letter-spacing:-.015em;color:#4a5c5d;margin-bottom:30px}
+.toc{margin-bottom:34px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px}
+.toc li{font-size:14.5px;margin-bottom:6px;color:#495c5d}
+.toc a{color:var(--teal);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+
+footer{background:var(--abyss);border-top:1px solid #17454d;padding:26px 0;color:#7fa5aa;font-size:13px}
+.foot-in{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+footer a{color:#7fa5aa;text-decoration:none}
+footer a:hover{color:var(--cream)}
+.foot-legal{display:flex;gap:10px;align-items:center}
+
+@media(max-width:760px){
+  .nav a.lnk{display:none}
+  .panel{padding:26px 22px;border-radius:18px}
+  .legal-wrap{padding:36px 0 56px}
+  .page-head{padding:44px 0 40px}
+  .toc ol{columns:1}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="2"/></symbol>
+</svg>
+<nav class="nav">
+  <div class="wrap nav-in">
+    <div class="mark"><svg class="ic"><use href="#i-rings"/></svg></div>
+    <span class="brand"><a href="/">EnzoLabs</a></span>
+    <span class="nav-sp"></span>
+    <a class="lnk" href="/#how">How it works</a>
+    <a class="lnk" href="/#faq">FAQ</a>
+    <a class="btn btn-cream" href="/#book">Book a demo</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <h1>Terms &amp; Conditions</h1>
+    <p class="stamp">Last Updated: August 26, 2026</p>
+  </div>
+</header>
+
+<main class="legal-wrap">
+  <div class="wrap">
+    <div class="panel legal">
+      <p class="intro">These Terms &amp; Conditions govern your use of Enzo Labs services, including AI-powered phone receptionists, appointment scheduling, automated customer-service communications, and SMS messaging. By using our services or communicating with a system we operate, you agree to these terms.</p>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#t1">About Enzo Labs services</a></li>
+          <li><a href="#t2">AI and automated communications</a></li>
+          <li><a href="#t3">SMS messaging program</a></li>
+          <li><a href="#t4">Consent</a></li>
+          <li><a href="#t5">Opt-out and help</a></li>
+          <li><a href="#t6">Carrier disclaimer</a></li>
+          <li><a href="#t7">Privacy</a></li>
+          <li><a href="#t8">Acceptable use</a></li>
+          <li><a href="#t9">Service availability</a></li>
+          <li><a href="#t10">Disclaimers and liability</a></li>
+          <li><a href="#t11">Changes to these terms</a></li>
+          <li><a href="#t12">Contact information</a></li>
+        </ol>
+      </div>
+
+      <h2 id="t1">1. About Enzo Labs services</h2>
+      <p>Enzo Labs ("Enzo Labs," "we," "us," or "our") provides AI-powered business automation to small and medium-sized businesses. Our services include AI phone receptionists that answer inbound calls, appointment booking, rescheduling and cancellation, automated customer-service responses, voice communications, and transactional SMS messaging.</p>
+      <p>Enzo Labs operates these systems <strong>on behalf of client businesses</strong>. If you are a customer of a business that uses Enzo Labs, you are interacting with a system we operate for that business. The business remains responsible for its own services, pricing, appointments, and obligations to you.</p>
+
+      <h2 id="t2">2. AI and automated communications</h2>
+      <p>Calls and messages handled through our services are answered by automated systems using artificial intelligence. These systems generate responses automatically and are not staffed by a human at the time of the interaction.</p>
+      <p>Automated systems can misunderstand requests, produce inaccurate information, or fail to complete a task. Information provided by an AI system — including availability, pricing, and appointment details — should be treated as subject to confirmation by the business. Enzo Labs is not responsible for decisions made in reliance on an automated response that has not been confirmed by the business.</p>
+      <p>You may request to speak with a person, request a callback, or contact the business directly through another channel at any time.</p>
+
+      <h2 id="t3">3. SMS messaging program</h2>
+      <p>Enzo Labs operates SMS messaging on behalf of client businesses. Messages are transactional and customer-care in nature, and may include appointment confirmations, appointment reminders, scheduling and rescheduling information, cancellation confirmations, business information you requested, and responses to customer-service questions.</p>
+
+      <div class="callout">
+        <p><strong>Message frequency varies.</strong></p>
+        <p><strong>Message and data rates may apply.</strong></p>
+        <p>Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for assistance.</p>
+        <p><strong>Consent to receive SMS messages is not a condition of purchasing any goods or services.</strong></p>
+      </div>
+
+      <p><strong>Mobile information and SMS opt-in consent will not be sold, rented, or shared with third parties or affiliates for their own marketing or promotional purposes.</strong> Information may be processed by service providers only as necessary to operate our communications infrastructure.</p>
+
+      <h2 id="t4">4. Consent</h2>
+      <p>By providing your mobile number to a business that uses Enzo Labs, or by opting in through a form, verbal confirmation, or reply message, you consent to receive transactional and customer-care SMS messages relating to your interactions with that business.</p>
+      <p>You represent that you are the subscriber or customary user of the mobile number you provide, and that you are authorized to consent to receive messages at that number. If your number changes or is reassigned, notify the business so records can be updated.</p>
+      <p>Consent is not required to purchase any goods or services.</p>
+
+      <h2 id="t5">5. Opt-out and help</h2>
+      <p>You may withdraw consent at any time by replying <strong>STOP</strong> to any message from the relevant number. You will receive a single confirmation message, after which no further messages will be sent from that program. Opting out of one business's messages does not opt you out of another business's messages.</p>
+      <p>Reply <strong>HELP</strong> to any message for assistance, or contact us using the details in Section 12.</p>
+      <p>Opting out of SMS does not prevent you from contacting the business by phone or other means, and does not cancel appointments you have already booked.</p>
+
+      <h2 id="t6">6. Carrier disclaimer</h2>
+      <p><strong>Wireless carriers are not liable for delayed or undelivered messages.</strong> Message delivery depends on factors outside our control, including carrier networks, device settings, and network coverage. We do not guarantee that any message will be delivered, or delivered on time.</p>
+      <p>Supported carriers may change without notice.</p>
+
+      <h2 id="t7">7. Privacy</h2>
+      <p>Our collection and use of information is described in our <a href="/privacy.html">Privacy Policy</a>, which forms part of these terms. Please review it to understand how information from calls, messages, and appointments is handled.</p>
+
+      <h2 id="t8">8. Acceptable use</h2>
+      <p>When interacting with our services, you agree not to:</p>
+      <ul>
+        <li>Use the service for any unlawful, fraudulent, harassing, threatening, or abusive purpose</li>
+        <li>Impersonate another person or provide a phone number you are not authorized to use</li>
+        <li>Attempt to disrupt, overload, reverse engineer, or gain unauthorized access to our systems</li>
+        <li>Submit content that infringes the rights of others or violates applicable law</li>
+        <li>Use automated means to flood, scrape, or abuse our phone or messaging systems</li>
+      </ul>
+      <p>We may suspend or block access to our services where we reasonably believe these terms have been violated.</p>
+
+      <h2 id="t9">9. Service availability</h2>
+      <p>We aim to keep our services available continuously, but we do not guarantee uninterrupted operation. Services may be unavailable due to maintenance, carrier or provider outages, network failures, or circumstances beyond our control. Features may be added, modified, or discontinued.</p>
+
+      <h2 id="t10">10. Disclaimers and limitation of liability</h2>
+      <p>Our services are provided "as is" and "as available," without warranties of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement.</p>
+      <p>To the maximum extent permitted by law, Enzo Labs is not liable for indirect, incidental, special, consequential, or punitive damages, or for lost profits, lost business, or missed appointments, arising from your use of or inability to use our services.</p>
+      <p>Nothing in these terms excludes liability that cannot be excluded under applicable law.</p>
+
+      <h2 id="t11">11. Changes to these terms</h2>
+      <p>We may update these Terms &amp; Conditions from time to time. When we do, we will revise the "Last Updated" date at the top of this page. Continued use of our services after an update constitutes acceptance of the revised terms.</p>
+
+      <h2 id="t12">12. Contact information</h2>
+      <p>Questions about these Terms &amp; Conditions:</p>
+      <ul>
+        <li>Email: <a href="mailto:labsmythos@gmail.com">labsmythos@gmail.com</a></li>
+        <li>Phone: <a href="tel:+13252080538">(325) 208-0538</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>&copy; 2026 EnzoLabs</span>
+    <span class="nav-sp"></span>
+    <span class="foot-legal"><a href="/privacy.html">Privacy Policy</a> <span>|</span> <a href="/terms.html">Terms &amp; Conditions</a></span>
+    <a href="tel:+13252080538">(325) 208-0538</a>
+    <a href="mailto:labsmythos@gmail.com">labsmythos@gmail.com</a>
+    <a href="https://linkedin.com/company/enzolabs-ai">LinkedIn</a>
+  </div>
+</footer>
+</body>
+</html>
