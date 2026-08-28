@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EnzoLabs — AI receptionists for your business</title>
+<meta name="build" content="v5">
 <meta name="description" content="An AI receptionist that answers your phone, books appointments, and never sends a customer to voicemail. Call and hear it yourself.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,7 +66,6 @@ a{color:inherit}
 .nav-in{display:flex;align-items:center;gap:14px;height:68px}
 .mark{width:32px;height:32px;border-radius:9px;background:var(--accent);color:#0a2f36;display:grid;place-items:center;flex:none}
 .brand{font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:-.01em;line-height:1.15}
-.brand small{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
 .sp{flex:1}
 .nav a.lnk{color:var(--text-secondary);text-decoration:none;font-size:14px;margin-left:26px}
 .nav a.lnk:hover{color:var(--text-primary)}
@@ -156,7 +156,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border:0;border-radiu
 
 .founders{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
 .person{display:flex;gap:18px;align-items:flex-start}
-.avatar{width:66px;height:66px;border-radius:50%;flex:none;background:rgba(255,255,255,.10);border:1px solid var(--glass-border);object-fit:cover;display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:20px;color:var(--foam)}
+.avatar{width:66px;height:66px;border-radius:50%;flex:none;background:rgba(255,255,255,.10);border:1px solid var(--glass-border);object-fit:cover;object-position:center top;filter:saturate(1.05)}
 .person h3{font-size:18px}
 .person .role{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--foam);margin:5px 0 10px}
 .person p{font-size:14.5px;color:var(--text-secondary)}
@@ -183,10 +183,13 @@ footer{border-top:1px solid rgba(255,255,255,.10);padding:30px 0}
 .reveal{opacity:0;transform:translateY(24px);filter:blur(8px);transition:opacity .7s cubic-bezier(.34,1.56,.64,1),transform .7s cubic-bezier(.34,1.56,.64,1),filter .6s ease}
 .reveal.visible{opacity:1;transform:none;filter:none}
 
-elevenlabs-convai{position:relative;z-index:120}
+elevenlabs-convai{z-index:2000}
 @media(max-width:760px){
   elevenlabs-convai{transform:scale(.78)!important;transform-origin:bottom right!important}
 }
+.agent-fallback{position:fixed;right:20px;bottom:20px;z-index:1500;display:none;align-items:center;gap:11px;background:var(--accent);color:#0a2f36;font-family:var(--body);font-size:15px;font-weight:500;padding:.85rem 1.5rem;border-radius:var(--pill);text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.agent-fallback.show{display:inline-flex}
+.agent-fallback .ic{font-size:18px}
 @media(max-width:860px){
   .calc{grid-template-columns:1fr}
   .founders{grid-template-columns:1fr}
@@ -239,9 +242,8 @@ elevenlabs-convai{position:relative;z-index:120}
 <nav class="glass-nav nav">
   <div class="wrap nav-in">
     <span class="mark"><svg class="ic" style="font-size:19px" aria-hidden="true"><use href="#i-rings"/></svg></span>
-    <span class="brand">EnzoLabs<small>Custom business solutions</small></span>
+    <span class="brand">EnzoLabs</span>
     <span class="sp"></span>
-    <a class="lnk" href="#cost">The math</a>
     <a class="lnk" href="#how">How it works</a>
     <a class="lnk" href="#hear">Hear a call</a>
     <a class="lnk" href="#faq">FAQ</a>
@@ -379,7 +381,7 @@ elevenlabs-convai{position:relative;z-index:120}
     <div class="glass-card glass-flat" style="padding:2.5rem">
       <div class="founders">
         <div class="person">
-          <span class="avatar">ML</span>
+          <img class="avatar" src="maksym.jpg" alt="Maksym Lysun" width="66" height="66" loading="lazy">
           <div>
             <h3>Maksym Lysun</h3>
             <p class="role">Runs the business side</p>
@@ -387,7 +389,7 @@ elevenlabs-convai{position:relative;z-index:120}
           </div>
         </div>
         <div class="person">
-          <span class="avatar">CR</span>
+          <img class="avatar" src="chris.jpg" alt="Chris Rodrigues" width="66" height="66" loading="lazy">
           <div>
             <h3>Chris Rodrigues</h3>
             <p class="role">Builds the agents</p>
@@ -558,6 +560,32 @@ document.querySelectorAll('.reveal').forEach(function (el, i) {
   end-call-text="End call"
   avatar-orb-color-1="#0d5c63"
   avatar-orb-color-2="#7fcdd3"></elevenlabs-convai>
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+<a class="agent-fallback" id="agentFallback" href="tel:+13252080538">
+  <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>
+  Talk to the agent
+</a>
+<script src="https://cdn.jsdelivr.net/npm/@elevenlabs/convai-widget-embed@0.17.1" async type="text/javascript"
+  onerror="window.__convaiError=true"></script>
+<script>
+function elog(msg) {
+  try { if (window.console && typeof console.log === 'function') console.log('[EnzoLabs] ' + msg); } catch (e) {}
+}
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    var defined = !!(window.customElements && customElements.get('elevenlabs-convai'));
+    var host = document.querySelector('elevenlabs-convai');
+    var painted = !!(host && host.shadowRoot && host.shadowRoot.childElementCount > 0);
+    if (defined && painted) {
+      elog('Widget registered and rendered.');
+      return;
+    }
+    elog(!defined
+      ? ('Widget did not register. ' + (window.__convaiError ? 'CDN script failed to load.' : 'Script loaded but element never defined.'))
+      : 'Widget registered but rendered nothing — its config fetch was blocked.');
+    var fb = document.getElementById('agentFallback');
+    if (fb) fb.classList.add('show');
+  }, 5000);
+});
+</script>
 </body>
 </html>
