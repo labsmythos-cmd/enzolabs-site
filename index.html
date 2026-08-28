@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EnzoLabs — AI receptionists for your business</title>
-<meta name="build" content="v6">
+<meta name="build" content="v8">
 <meta name="description" content="An AI receptionist that answers your phone, books appointments, and never sends a customer to voicemail. Call and hear it yourself.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -434,10 +434,13 @@ elevenlabs-convai{z-index:2000}
     <h2>Stop paying for calls you never answer</h2>
     <p class="sub">Free setup on your first month. Cancel anytime.</p>
     <div class="cta-row">
-      <a class="btn btn-primary btn-lg" href="#">
+      <button class="btn btn-primary btn-lg" type="button"
+        data-cal-namespace="15min"
+        data-cal-link="enzo-labs/15min"
+        data-cal-config='{"layout":"month_view","theme":"dark"}'>
         <svg class="ic" style="font-size:19px" aria-hidden="true"><use href="#i-cal-check"/></svg>
         Pick a 15-minute slot
-      </a>
+      </button>
       <a class="btn btn-glass btn-lg" href="tel:+13252080538">
         <svg class="ic" style="font-size:19px" aria-hidden="true"><use href="#i-phone"/></svg>
         Or just call the line
@@ -584,6 +587,18 @@ window.addEventListener('load', function () {
     var fb = document.getElementById('agentFallback');
     if (fb) fb.classList.add('show');
   }, 5000);
+});
+</script>
+<script>
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "15min", { origin: "https://app.cal.com" });
+Cal.ns["15min"]("ui", {
+  hideEventTypeDetails: false,
+  layout: "month_view",
+  cssVarsPerTheme: {
+    dark:  { "cal-brand": "#7fcdd3" },
+    light: { "cal-brand": "#0d5c63" }
+  }
 });
 </script>
 </body>
