@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EnzoLabs — AI receptionists for your business</title>
-<meta name="build" content="v8">
+<meta name="build" content="v10">
 <meta name="description" content="An AI receptionist that answers your phone, books appointments, and never sends a customer to voicemail. Call and hear it yourself.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -246,7 +246,11 @@ elevenlabs-convai{z-index:2000}
     <span class="sp"></span>
     <a class="lnk" href="#how">How it works</a>
     <a class="lnk" href="#faq">FAQ</a>
-    <a class="btn btn-primary" href="#book">Talk to us</a>
+    <button class="btn btn-primary" type="button"
+      data-cal-namespace="15min"
+      data-cal-link="enzo-labs/15min"
+      data-cal-config='{"layout":"month_view","theme":"dark"}'
+      onclick="setTimeout(function(){ if(!document.querySelector('cal-modal-box')) window.open('https://cal.com/enzo-labs/15min','_blank','noopener'); }, 1200);">Talk to us</button>
   </div>
 </nav>
 
@@ -437,7 +441,8 @@ elevenlabs-convai{z-index:2000}
       <button class="btn btn-primary btn-lg" type="button"
         data-cal-namespace="15min"
         data-cal-link="enzo-labs/15min"
-        data-cal-config='{"layout":"month_view","theme":"dark"}'>
+        data-cal-config='{"layout":"month_view","theme":"dark"}'
+        onclick="setTimeout(function(){ if(!document.querySelector('cal-modal-box')) window.open('https://cal.com/enzo-labs/15min','_blank','noopener'); }, 1200);">
         <svg class="ic" style="font-size:19px" aria-hidden="true"><use href="#i-cal-check"/></svg>
         Pick a 15-minute slot
       </button>
@@ -591,7 +596,7 @@ window.addEventListener('load', function () {
 </script>
 <script>
 (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "15min", { origin: "https://app.cal.com" });
+Cal("init", "15min", { origin: "https://cal.com" });
 Cal.ns["15min"]("ui", {
   hideEventTypeDetails: false,
   layout: "month_view",
